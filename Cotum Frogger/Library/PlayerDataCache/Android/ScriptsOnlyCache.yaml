@@ -2,6 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - CameraPointer
+    - MouseController
     - ObjectController
     - TextSpeech.SpeechToText
     - VoiceController
@@ -52,17 +53,19 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1826}
+      Script: {instanceID: 1852}
     - Class: 114
-      Script: {instanceID: 2662}
+      Script: {instanceID: 2686}
     - Class: 114
-      Script: {instanceID: 3118}
+      Script: {instanceID: 3142}
     - Class: 114
-      Script: {instanceID: 3596}
+      Script: {instanceID: 3620}
     - Class: 114
-      Script: {instanceID: 4116}
+      Script: {instanceID: 4140}
     - Class: 114
-      Script: {instanceID: 4290}
+      Script: {instanceID: 4314}
+    - Class: 114
+      Script: {instanceID: 17184}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -596,6 +599,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: TouchInputModule
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MouseController
   platform: 13
   scenePathNames:
   - Assets/Scenes/BaseScene/Scenes/VrMode.unity

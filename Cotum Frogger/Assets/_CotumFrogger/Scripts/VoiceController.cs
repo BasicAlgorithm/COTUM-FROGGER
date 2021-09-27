@@ -10,6 +10,14 @@ public class VoiceController : MonoBehaviour
 {
     const string LANG_CODE = "es-ES";
 
+    private Transform main_camera_transform;
+    private Transform player_transform;
+
+    private Vector3 camera_forward;
+    private Vector3 camera_right;
+
+    private string current_partial_result;
+
     private bool is_listening;
 
     [SerializeField]
@@ -17,6 +25,9 @@ public class VoiceController : MonoBehaviour
 
     void Awake()
     {
+        main_camera_transform = Camera.main.transform;
+        player_transform = GameObject.FindWithTag("Player").transform;
+        current_partial_result = "";
         is_listening = false;
     }
 
@@ -65,14 +76,65 @@ public class VoiceController : MonoBehaviour
 
     void OnPartialSpeechResult(string result)
     {
-        uiText.text = result;
-        is_listening = false;
+        if (current_partial_result != result)
+        {
+            string last_word = result.Substring(result.LastIndexOf(' ') + 1);
+            uiText.text = last_word;
+            if (last_word.Contains("adelante"))
+            {
+                Vector2 movement = new Vector2(0, 1);
+
+                GetCameraForwardRightVectors();
+
+                player_transform.position += camera_forward * movement.y;
+            }
+            else if (last_word.Contains("atrás"))
+            {
+                Vector2 movement = new Vector2(0, -1);
+
+                GetCameraForwardRightVectors();
+
+                player_transform.position += camera_forward * movement.y;
+            }
+            else if (last_word.Contains("izquierda"))
+            {
+                Vector2 movement = new Vector2(-1, 0);
+
+                GetCameraForwardRightVectors();
+
+                player_transform.position += camera_right * movement.x;
+            }
+            else if (last_word.Contains("derecha"))
+            {
+                Vector2 movement = new Vector2(1, 0);
+
+                GetCameraForwardRightVectors();
+
+                player_transform.position += camera_right * movement.x;
+            }
+
+            StopListening();
+            current_partial_result = result;
+        }
     }
 
     void OnFinalSpeechResult(string result)
     {
-        OnPartialSpeechResult(result);
+        current_partial_result = "";
+        is_listening = false;
     }
 
     #endregion
+
+    private void GetCameraForwardRightVectors()
+    {
+        camera_forward = main_camera_transform.forward;
+        camera_right = main_camera_transform.right;
+
+        camera_forward.y = 0;
+        camera_right.y = 0;
+
+        camera_forward = camera_forward.normalized;
+        camera_right = camera_right.normalized;
+    }
 }
