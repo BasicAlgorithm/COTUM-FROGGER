@@ -18,38 +18,39 @@
       "DebugActionIndex": 0
     },
     {
-      "Annotation": "Il2Cpp D:/STUDIES/ComputerScience/CS_UCSP_8th/IHC/COTUM-FROGGER/Cotum Frogger/Library/Il2cppBuildCache/Android/armeabi-v7a/Native/armeabi-v7a/libil2cpp.so",
-      "Action": "\"D:\\INSTALACIONES\\Unity Install\\2020.3.18f1\\Editor\\Data\\il2cpp/build/deploy/netcoreapp3.1/il2cpp.exe\" --convert-to-cpp --emit-null-checks --enable-array-bounds-check --dotnetprofile=\"unityaot\" --compile-cpp --libil2cpp-static --platform=\"Android\" --architecture=\"ARMv7\" --configuration=\"Release\" --outputpath=\"D:\\STUDIES\\ComputerScience\\CS_UCSP_8th\\IHC\\COTUM-FROGGER\\Cotum Frogger\\Library\\Il2cppBuildCache\\Android\\armeabi-v7a\\Native\\armeabi-v7a\\libil2cpp.so\" --cachedirectory=\"D:\\STUDIES\\ComputerScience\\CS_UCSP_8th\\IHC\\COTUM-FROGGER\\Cotum Frogger\\Assets\\..\\Library\\il2cpp_android_armeabi-v7a/il2cpp_cache\" --additional-include-directories=\"D:/INSTALACIONES/Unity Install/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Tools\\bdwgc/include\" --additional-include-directories=\"D:/INSTALACIONES/Unity Install/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Tools\\libil2cpp/include\" --baselib-directory=\"D:/INSTALACIONES/Unity Install/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer\\Variations\\il2cpp\\Release\\StaticLibs\\armeabi-v7a\" --avoid-dynamic-library-copy --tool-chain-path=\"D:/INSTALACIONES/Unity Install/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/NDK\" --incremental-g-c-time-slice=3 --profiler-report --map-file-parser=\"D:/INSTALACIONES/Unity Install/2020.3.18f1/Editor/Data/Tools/MapFileParser/MapFileParser.exe\" --directory=\"D:/STUDIES/ComputerScience/CS_UCSP_8th/IHC/COTUM-FROGGER/Cotum Frogger/Temp/StagingArea/assets/bin/Data/Managed\" --generatedcppdir=\"D:/STUDIES/ComputerScience/CS_UCSP_8th/IHC/COTUM-FROGGER/Cotum Frogger/Library/Il2cppBuildCache/Android/armeabi-v7a/il2cppOutput\"",
+      "Annotation": "Il2Cpp E:/Files/Documents/git/COTUM-FROGGER/Cotum Frogger/Library/Il2cppBuildCache/Android/armeabi-v7a/Native/armeabi-v7a/libil2cpp.so",
+      "Action": "D:\\UnityHub\\2020.3.18f1\\Editor\\Data\\il2cpp/build/deploy/netcoreapp3.1/il2cpp.exe --convert-to-cpp --emit-null-checks --enable-array-bounds-check --dotnetprofile=\"unityaot\" --compile-cpp --libil2cpp-static --platform=\"Android\" --architecture=\"ARMv7\" --configuration=\"Release\" --outputpath=\"E:\\Files\\Documents\\git\\COTUM-FROGGER\\Cotum Frogger\\Library\\Il2cppBuildCache\\Android\\armeabi-v7a\\Native\\armeabi-v7a\\libil2cpp.so\" --cachedirectory=\"E:\\Files\\Documents\\git\\COTUM-FROGGER\\Cotum Frogger\\Assets\\..\\Library\\il2cpp_android_armeabi-v7a/il2cpp_cache\" --additional-include-directories=\"D:/UnityHub/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Tools\\bdwgc/include\" --additional-include-directories=\"D:/UnityHub/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Tools\\libil2cpp/include\" --baselib-directory=\"D:/UnityHub/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer\\Variations\\il2cpp\\Development\\StaticLibs\\armeabi-v7a\" --avoid-dynamic-library-copy --tool-chain-path=\"D:/UnityHub/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/NDK\" --incremental-g-c-time-slice=3 --profiler-report --map-file-parser=D:/UnityHub/2020.3.18f1/Editor/Data/Tools/MapFileParser/MapFileParser.exe --directory=\"E:/Files/Documents/git/COTUM-FROGGER/Cotum Frogger/Temp/StagingArea/assets/bin/Data/Managed\" --generatedcppdir=\"E:/Files/Documents/git/COTUM-FROGGER/Cotum Frogger/Library/Il2cppBuildCache/Android/armeabi-v7a/il2cppOutput\"",
       "Inputs": [
-        "D:/STUDIES/ComputerScience/CS_UCSP_8th/IHC/COTUM-FROGGER/Cotum Frogger/Temp/StagingArea/assets/bin/Data/Managed",
-        "D:/STUDIES/ComputerScience/CS_UCSP_8th/IHC/COTUM-FROGGER/Cotum Frogger/Temp/StagingArea/assets/bin/Data/Managed/Assembly-CSharp.dll",
-        "D:/STUDIES/ComputerScience/CS_UCSP_8th/IHC/COTUM-FROGGER/Cotum Frogger/Temp/StagingArea/assets/bin/Data/Managed/Google.XR.Cardboard.dll",
-        "D:/STUDIES/ComputerScience/CS_UCSP_8th/IHC/COTUM-FROGGER/Cotum Frogger/Temp/StagingArea/assets/bin/Data/Managed/Mono.Security.dll",
-        "D:/STUDIES/ComputerScience/CS_UCSP_8th/IHC/COTUM-FROGGER/Cotum Frogger/Temp/StagingArea/assets/bin/Data/Managed/mscorlib.dll",
-        "D:/STUDIES/ComputerScience/CS_UCSP_8th/IHC/COTUM-FROGGER/Cotum Frogger/Temp/StagingArea/assets/bin/Data/Managed/System.Configuration.dll",
-        "D:/STUDIES/ComputerScience/CS_UCSP_8th/IHC/COTUM-FROGGER/Cotum Frogger/Temp/StagingArea/assets/bin/Data/Managed/System.Core.dll",
-        "D:/STUDIES/ComputerScience/CS_UCSP_8th/IHC/COTUM-FROGGER/Cotum Frogger/Temp/StagingArea/assets/bin/Data/Managed/System.dll",
-        "D:/STUDIES/ComputerScience/CS_UCSP_8th/IHC/COTUM-FROGGER/Cotum Frogger/Temp/StagingArea/assets/bin/Data/Managed/System.Xml.dll",
-        "D:/STUDIES/ComputerScience/CS_UCSP_8th/IHC/COTUM-FROGGER/Cotum Frogger/Temp/StagingArea/assets/bin/Data/Managed/Unity.XR.Management.dll",
-        "D:/STUDIES/ComputerScience/CS_UCSP_8th/IHC/COTUM-FROGGER/Cotum Frogger/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.AndroidJNIModule.dll",
-        "D:/STUDIES/ComputerScience/CS_UCSP_8th/IHC/COTUM-FROGGER/Cotum Frogger/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.ARModule.dll",
-        "D:/STUDIES/ComputerScience/CS_UCSP_8th/IHC/COTUM-FROGGER/Cotum Frogger/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.AudioModule.dll",
-        "D:/STUDIES/ComputerScience/CS_UCSP_8th/IHC/COTUM-FROGGER/Cotum Frogger/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.CoreModule.dll",
-        "D:/STUDIES/ComputerScience/CS_UCSP_8th/IHC/COTUM-FROGGER/Cotum Frogger/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.dll",
-        "D:/STUDIES/ComputerScience/CS_UCSP_8th/IHC/COTUM-FROGGER/Cotum Frogger/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.InputLegacyModule.dll",
-        "D:/STUDIES/ComputerScience/CS_UCSP_8th/IHC/COTUM-FROGGER/Cotum Frogger/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.InputModule.dll",
-        "D:/STUDIES/ComputerScience/CS_UCSP_8th/IHC/COTUM-FROGGER/Cotum Frogger/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.PhysicsModule.dll",
-        "D:/STUDIES/ComputerScience/CS_UCSP_8th/IHC/COTUM-FROGGER/Cotum Frogger/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.SharedInternalsModule.dll",
-        "D:/STUDIES/ComputerScience/CS_UCSP_8th/IHC/COTUM-FROGGER/Cotum Frogger/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.SpatialTracking.dll",
-        "D:/STUDIES/ComputerScience/CS_UCSP_8th/IHC/COTUM-FROGGER/Cotum Frogger/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.SubsystemsModule.dll",
-        "D:/STUDIES/ComputerScience/CS_UCSP_8th/IHC/COTUM-FROGGER/Cotum Frogger/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.XRModule.dll",
-        "D:/INSTALACIONES/Unity Install/2020.3.18f1/Editor/Data/Tools/MapFileParser/MapFileParser.exe",
-        "D:/INSTALACIONES/Unity Install/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Release/StaticLibs/armeabi-v7a/baselib.a",
-        "D:/INSTALACIONES/Unity Install/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Release/StaticLibs/armeabi-v7a/libunityruntime.a",
-        "\"D:/INSTALACIONES/Unity Install/2020.3.18f1/Editor/Data/il2cpp/build/deploy/netcoreapp3.1/il2cpp.exe\""
+        "E:/Files/Documents/git/COTUM-FROGGER/Cotum Frogger/Temp/StagingArea/assets/bin/Data/Managed",
+        "E:/Files/Documents/git/COTUM-FROGGER/Cotum Frogger/Temp/StagingArea/assets/bin/Data/Managed/Assembly-CSharp.dll",
+        "E:/Files/Documents/git/COTUM-FROGGER/Cotum Frogger/Temp/StagingArea/assets/bin/Data/Managed/Google.XR.Cardboard.dll",
+        "E:/Files/Documents/git/COTUM-FROGGER/Cotum Frogger/Temp/StagingArea/assets/bin/Data/Managed/Mono.Security.dll",
+        "E:/Files/Documents/git/COTUM-FROGGER/Cotum Frogger/Temp/StagingArea/assets/bin/Data/Managed/mscorlib.dll",
+        "E:/Files/Documents/git/COTUM-FROGGER/Cotum Frogger/Temp/StagingArea/assets/bin/Data/Managed/System.Configuration.dll",
+        "E:/Files/Documents/git/COTUM-FROGGER/Cotum Frogger/Temp/StagingArea/assets/bin/Data/Managed/System.Core.dll",
+        "E:/Files/Documents/git/COTUM-FROGGER/Cotum Frogger/Temp/StagingArea/assets/bin/Data/Managed/System.dll",
+        "E:/Files/Documents/git/COTUM-FROGGER/Cotum Frogger/Temp/StagingArea/assets/bin/Data/Managed/System.Xml.dll",
+        "E:/Files/Documents/git/COTUM-FROGGER/Cotum Frogger/Temp/StagingArea/assets/bin/Data/Managed/Unity.XR.Management.dll",
+        "E:/Files/Documents/git/COTUM-FROGGER/Cotum Frogger/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.AndroidJNIModule.dll",
+        "E:/Files/Documents/git/COTUM-FROGGER/Cotum Frogger/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.ARModule.dll",
+        "E:/Files/Documents/git/COTUM-FROGGER/Cotum Frogger/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.AudioModule.dll",
+        "E:/Files/Documents/git/COTUM-FROGGER/Cotum Frogger/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.CoreModule.dll",
+        "E:/Files/Documents/git/COTUM-FROGGER/Cotum Frogger/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.dll",
+        "E:/Files/Documents/git/COTUM-FROGGER/Cotum Frogger/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.InputLegacyModule.dll",
+        "E:/Files/Documents/git/COTUM-FROGGER/Cotum Frogger/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.InputModule.dll",
+        "E:/Files/Documents/git/COTUM-FROGGER/Cotum Frogger/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.PhysicsModule.dll",
+        "E:/Files/Documents/git/COTUM-FROGGER/Cotum Frogger/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.SharedInternalsModule.dll",
+        "E:/Files/Documents/git/COTUM-FROGGER/Cotum Frogger/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.SpatialTracking.dll",
+        "E:/Files/Documents/git/COTUM-FROGGER/Cotum Frogger/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.SubsystemsModule.dll",
+        "E:/Files/Documents/git/COTUM-FROGGER/Cotum Frogger/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.TextRenderingModule.dll",
+        "E:/Files/Documents/git/COTUM-FROGGER/Cotum Frogger/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.XRModule.dll",
+        "D:/UnityHub/2020.3.18f1/Editor/Data/Tools/MapFileParser/MapFileParser.exe",
+        "D:/UnityHub/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Development/StaticLibs/armeabi-v7a/baselib.a",
+        "D:/UnityHub/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Development/StaticLibs/armeabi-v7a/libunityruntime.a",
+        "D:/UnityHub/2020.3.18f1/Editor/Data/il2cpp/build/deploy/netcoreapp3.1/il2cpp.exe"
       ],
       "Outputs": [
-        "D:/STUDIES/ComputerScience/CS_UCSP_8th/IHC/COTUM-FROGGER/Cotum Frogger/Library/Il2cppBuildCache/Android/armeabi-v7a/Native/armeabi-v7a/libil2cpp.so"
+        "E:/Files/Documents/git/COTUM-FROGGER/Cotum Frogger/Library/Il2cppBuildCache/Android/armeabi-v7a/Native/armeabi-v7a/libil2cpp.so"
       ],
       "TargetDirectories": [],
       "PassIndex": 0,
@@ -64,19 +65,19 @@
   ],
   "FileSignatures": [
     {
-      "File": "../../../../../../../../../../INSTALACIONES/Unity Install/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Tools/bdwgc/include"
-    },
-    {
-      "File": "../../../../../../../../../../INSTALACIONES/Unity Install/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Tools/libil2cpp/include"
-    },
-    {
-      "File": "../../../../../../../../../../INSTALACIONES/Unity Install/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Release/StaticLibs/armeabi-v7a"
-    },
-    {
       "File": "../../../../Temp/StagingArea/assets/bin/Data/Managed"
     },
     {
       "File": "artifacts/buildprogram/tundra_buildprogram.dag.json"
+    },
+    {
+      "File": "D:/UnityHub/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Tools/bdwgc/include"
+    },
+    {
+      "File": "D:/UnityHub/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Tools/libil2cpp/include"
+    },
+    {
+      "File": "D:/UnityHub/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Development/StaticLibs/armeabi-v7a"
     },
     {
       "File": "il2cpp_settings.json"
@@ -90,7 +91,7 @@
       "Path": "../../../../Temp/StagingArea/assets/bin/Data/Managed"
     },
     {
-      "Path": "../../../../../../../../../../INSTALACIONES/Unity Install/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Release/StaticLibs/armeabi-v7a",
+      "Path": "D:/UnityHub/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Development/StaticLibs/armeabi-v7a",
       "Recurse": 1
     }
   ],

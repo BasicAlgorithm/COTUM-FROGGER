@@ -2024,7 +2024,29 @@ extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2008;
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2009;
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2010;
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2011;
-IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes* g_Il2CppTypeDefinitionSizesTable[2012] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2012;
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2013;
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2014;
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2015;
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2016;
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2017;
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2018;
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2019;
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2020;
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2021;
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2022;
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2023;
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2024;
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2025;
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2026;
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2027;
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2028;
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2029;
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2030;
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2031;
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2032;
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2033;
+IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes* g_Il2CppTypeDefinitionSizesTable[2034] = 
 {
 	(&g_typeDefinitionSize0),
 	(&g_typeDefinitionSize1),
@@ -4038,4 +4060,26 @@ IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes* g_Il2CppTypeDefinitionSizesTabl
 	(&g_typeDefinitionSize2009),
 	(&g_typeDefinitionSize2010),
 	(&g_typeDefinitionSize2011),
+	(&g_typeDefinitionSize2012),
+	(&g_typeDefinitionSize2013),
+	(&g_typeDefinitionSize2014),
+	(&g_typeDefinitionSize2015),
+	(&g_typeDefinitionSize2016),
+	(&g_typeDefinitionSize2017),
+	(&g_typeDefinitionSize2018),
+	(&g_typeDefinitionSize2019),
+	(&g_typeDefinitionSize2020),
+	(&g_typeDefinitionSize2021),
+	(&g_typeDefinitionSize2022),
+	(&g_typeDefinitionSize2023),
+	(&g_typeDefinitionSize2024),
+	(&g_typeDefinitionSize2025),
+	(&g_typeDefinitionSize2026),
+	(&g_typeDefinitionSize2027),
+	(&g_typeDefinitionSize2028),
+	(&g_typeDefinitionSize2029),
+	(&g_typeDefinitionSize2030),
+	(&g_typeDefinitionSize2031),
+	(&g_typeDefinitionSize2032),
+	(&g_typeDefinitionSize2033),
 };
