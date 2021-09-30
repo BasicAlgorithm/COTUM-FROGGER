@@ -1,5 +1,35 @@
 {
   "dependencies": {
+    "com.cysharp.unitask": {
+      "version": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask#2.2.5",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "72e620d169841f32bc6110ad0e12ee9eae6f1aaf"
+    },
+    "com.github.asus4.mediapipe": {
+      "version": "file:com.github.asus4.mediapipe",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.github.asus4.tflite": "2.4.1",
+        "com.github.asus4.tflite.common": "2.4.1"
+      }
+    },
+    "com.github.asus4.tflite": {
+      "version": "file:com.github.asus4.tflite",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
+    "com.github.asus4.tflite.common": {
+      "version": "file:com.github.asus4.tflite.common",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.github.asus4.tflite": "2.4.1"
+      }
+    },
     "com.google.xr.cardboard": {
       "version": "https://github.com/googlevr/cardboard-xr-plugin.git",
       "depth": 0,
@@ -10,6 +40,12 @@
       },
       "hash": "d9f0aa2eb03eb544069ea7278048994e548e6d03"
     },
+    "com.unity.2d.sprite": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {}
+    },
     "com.unity.collab-proxy": {
       "version": "1.9.0",
       "depth": 0,
@@ -19,7 +55,7 @@
     },
     "com.unity.ext.nunit": {
       "version": "1.0.6",
-      "depth": 1,
+      "depth": 0,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
@@ -44,6 +80,13 @@
     },
     "com.unity.ide.vscode": {
       "version": "1.2.3",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.mathematics": {
+      "version": "1.2.1",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
