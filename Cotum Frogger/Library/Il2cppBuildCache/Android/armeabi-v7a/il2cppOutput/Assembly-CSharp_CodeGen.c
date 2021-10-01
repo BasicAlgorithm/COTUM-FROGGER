@@ -66,7 +66,13 @@ extern void U3CStartXRU3Ed__8_System_Collections_Generic_IEnumeratorU3CSystem_Ob
 extern void U3CStartXRU3Ed__8_System_Collections_IEnumerator_Reset_m9FF12534D850D9A4D4CAD45F5D6478B3987E962F (void);
 // 0x0000001B System.Object VrModeController/<StartXR>d__8::System.Collections.IEnumerator.get_Current()
 extern void U3CStartXRU3Ed__8_System_Collections_IEnumerator_get_Current_mD9DE5AF0A17F33DDF6B39715CDBB499873D1104C (void);
-static Il2CppMethodPointer s_methodPointers[27] = 
+// 0x0000001C System.Void VehicleGenerator::Start()
+extern void VehicleGenerator_Start_mD4D8870AC8CC416FEE82134AFE6F52AD082B5D1F (void);
+// 0x0000001D System.Void VehicleGenerator::Update()
+extern void VehicleGenerator_Update_mD4E77B12E564C2CE86EF7156ED01C0D276C63E51 (void);
+// 0x0000001E System.Void VehicleGenerator::.ctor()
+extern void VehicleGenerator__ctor_m7477A7C0D157AF190D702A115FD25B4B2C2DA1D0 (void);
+static Il2CppMethodPointer s_methodPointers[30] = 
 {
 	CameraPointer_Update_m03EFDAC6980037B33C39C2070279E57FDFA0E982,
 	CameraPointer__ctor_mB1A747A1AEACE6E16A9D805F4F6EB409804E451E,
@@ -95,43 +101,49 @@ static Il2CppMethodPointer s_methodPointers[27] =
 	U3CStartXRU3Ed__8_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mEC04F71BAC18A7DEBD2E3F2D1947F12DD2ED4838,
 	U3CStartXRU3Ed__8_System_Collections_IEnumerator_Reset_m9FF12534D850D9A4D4CAD45F5D6478B3987E962F,
 	U3CStartXRU3Ed__8_System_Collections_IEnumerator_get_Current_mD9DE5AF0A17F33DDF6B39715CDBB499873D1104C,
+	VehicleGenerator_Start_mD4D8870AC8CC416FEE82134AFE6F52AD082B5D1F,
+	VehicleGenerator_Update_mD4E77B12E564C2CE86EF7156ED01C0D276C63E51,
+	VehicleGenerator__ctor_m7477A7C0D157AF190D702A115FD25B4B2C2DA1D0,
 };
-static const int32_t s_InvokerIndices[27] = 
+static const int32_t s_InvokerIndices[30] = 
 {
-	910,
-	910,
-	910,
-	910,
-	910,
-	910,
-	910,
-	910,
-	910,
-	910,
-	796,
-	910,
-	904,
-	904,
-	910,
-	910,
-	910,
-	910,
-	887,
-	910,
-	910,
-	775,
-	910,
-	904,
-	887,
-	910,
-	887,
+	958,
+	958,
+	958,
+	958,
+	958,
+	958,
+	958,
+	958,
+	958,
+	958,
+	834,
+	958,
+	952,
+	952,
+	958,
+	958,
+	958,
+	958,
+	935,
+	958,
+	958,
+	813,
+	958,
+	952,
+	935,
+	958,
+	935,
+	958,
+	958,
+	958,
 };
 extern const CustomAttributesCacheGenerator g_AssemblyU2DCSharp_AttributeGenerators[];
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	27,
+	30,
 	s_methodPointers,
 	0,
 	NULL,
