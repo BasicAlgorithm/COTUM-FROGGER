@@ -8,10 +8,16 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/_CotumFrogger/Scenes/MenuRoom.unity
+    guid: 0c1c045fe4f08334cbd5924c3bac07e7
+  - enabled: 1
+    path: Assets/_CotumFrogger/Scenes/FIrstLevel.unity
+    guid: 4ceee8795568095468c1b68f9863bf9c
   - enabled: 0
     path: Assets/Scenes/BaseScene/Scenes/BaseScene.unity
     guid: 5472f829d0a75124f88d7633babd92e1
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/BaseScene/Scenes/VrMode.unity
     guid: 4812ec05e87b8414abcdfe0d625c0e60
   - enabled: 0
