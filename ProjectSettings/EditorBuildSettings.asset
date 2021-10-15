@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/_CotumFrogger/Scenes/MenuRoom.unity
     guid: 0c1c045fe4f08334cbd5924c3bac07e7
   - enabled: 1
@@ -23,5 +23,8 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/TextSpeech/SpeechAndText/Sample/SampleSpeechToText.unity
     guid: d9447599b4cad0245ac00fa552c354b6
+  - enabled: 0
+    path: Assets/Scenes/FirstLevel/Scenes/FIrstLevel.unity
+    guid: c99f59f187b7dd748ac76f30acfcf8d6
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 0df915e4af5ab3343b6d8301f9c52c24, type: 2}
