@@ -1467,7 +1467,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8d14ef41e7183d4aab72e0fe2e33374, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activation_word: jugar
+  activation_word: reintentar
   action:
     m_PersistentCalls:
       m_Calls:
