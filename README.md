@@ -3,7 +3,7 @@ Cotum Frogger is a virtual reality frogger-based videogame inspired on Arequipa 
 
 ## Instalación
 1. Descargar el proyecto Cotum Frogger.
-2. Abrir el proyecto desde Unity Hub. La versión usada durante el desarrollo y que recomendados es la `2021.3.18f1`.
+2. Abrir el proyecto desde Unity Hub. La versión usada durante el desarrollo y que recomendamos es la `2021.3.18f1`.
 3. Darle a `File > Build Settings`.
 4. Conectar nuestro dispositivo móvil Android en modo debugging.
 5. Darle a `Build and run`.
