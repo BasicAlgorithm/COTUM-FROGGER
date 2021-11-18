@@ -15,6 +15,8 @@ public class CollisionWithSomeCar : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
+        // Temporal comment to test all work on scene FirstLevel
+        /*
         if (collision.gameObject.tag == "SomeCar")
         {
             Debug.Log("YOU LOSE");
@@ -25,5 +27,6 @@ public class CollisionWithSomeCar : MonoBehaviour
             Debug.Log("YOU WIN");
             SceneManager.LoadScene("MenuRoom");
         }
+        */
     }
 }

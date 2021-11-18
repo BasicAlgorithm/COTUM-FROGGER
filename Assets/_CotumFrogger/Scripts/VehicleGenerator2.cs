@@ -32,7 +32,7 @@ public class VehicleGenerator2 : MonoBehaviour
         trans.Translate(0, 0, velocity * Time.deltaTime * vehicleDirection);
         traveledDistance += velocity * Time.deltaTime;
 
-        Debug.Log("traveled_distance: " + traveledDistance);
+        //Debug.Log("traveled_distance: " + traveledDistance);
 
         if (traveledDistance >= maxTravelDistance)
         {
