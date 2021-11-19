@@ -8,24 +8,7 @@ using Photon.Pun.Demo.PunBasics;
 
 public class PlayerManager : MonoBehaviourPunCallbacks, IPunObservable
 {
-    #region IPunObservable implementation
-    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
-    {
-        if (stream.IsWriting)
-        {
-            // We own this player: send the others our data
-            stream.SendNext(IsFiring);
-            stream.SendNext(Health);
-        }
-        else
-        {
-            // Network player, receive data
-            this.IsFiring = (bool)stream.ReceiveNext();
-            this.Health = (float)stream.ReceiveNext();
-        }
-    }
-
-    #endregion
+   
 
     #region Public Field
 
@@ -139,6 +122,11 @@ public class PlayerManager : MonoBehaviourPunCallbacks, IPunObservable
 #endif
 
     }
+    public override void OnDisable()
+    {
+        base.OnDisable();
+        UnityEngine.SceneManagement.SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
 
     // MonoBehaviour method called on GameObject by Unity on every frame.
     void Update()
@@ -227,11 +215,6 @@ void OnLevelWasLoaded(int level)
         _uiGo.SendMessage("SetTarget", this, SendMessageOptions.RequireReceiver);
     }
 
-    public override void OnDisable()
-    {
-        base.OnDisable();
-        UnityEngine.SceneManagement.SceneManager.sceneLoaded -= OnSceneLoaded;
-    }
 
     #endregion
 
@@ -264,6 +247,25 @@ void OnLevelWasLoaded(int level)
             {
                 IsFiring = false;
             }
+        }
+    }
+
+    #endregion
+
+    #region IPunObservable implementation
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        if (stream.IsWriting)
+        {
+            // We own this player: send the others our data
+            stream.SendNext(IsFiring);
+            stream.SendNext(Health);
+        }
+        else
+        {
+            // Network player, receive data
+            this.IsFiring = (bool)stream.ReceiveNext();
+            this.Health = (float)stream.ReceiveNext();
         }
     }
 
