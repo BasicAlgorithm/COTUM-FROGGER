@@ -1,71 +1,80 @@
-using System.Collections;
-using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
 
-using Photon.Pun;
-
-public class PlayerAnimatorManager : MonoBehaviourPun
+namespace COTUM
 {
-    #region Private Fields
+	public class PlayerAnimatorManager : MonoBehaviourPun 
+	{
+        #region Private Fields
 
-    [SerializeField]
-    private float directionDampTime = 0.01f;
+        [SerializeField]
+	    private float directionDampTime = 0.25f;
+        Animator animator;
 
-    private Animator animator;
+		#endregion
 
-    [SerializeField] 
-    private float speed = 5.0f;
+		#region MonoBehaviour CallBacks
 
-    #endregion
+		// MonoBehaviour method called on GameObject by Unity during initialization phase.
+	    void Start () 
+	    {
+	        animator = GetComponent<Animator>();
+	    }
 
-    #region MonoBehaviour CallBacks
+		// MonoBehaviour method called on GameObject by Unity on every frame.
+		void Update()
+		{
 
-    // Use this for initialization
-    void Start()
-    {
-        animator = GetComponent<Animator>();
-        if (!animator)
-        {
-            Debug.LogError("PlayerAnimatorManager is Missing Animator Component", this);
-        }
-    }
+			// Prevent control is connected to Photon and represent the localPlayer
+			if (photonView.IsMine == false && PhotonNetwork.IsConnected == true)
+			{
+				return;
+			}
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (photonView.IsMine == false && PhotonNetwork.IsConnected == true)
-        {
-            return;
-        }
+			// failSafe is missing Animator component on GameObject
+			if (!animator)
+			{
+				return;
+			}
 
-        if (!animator)
-        {
-            return;
-        }
-        // deal with Jumping
-        AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+			// deal with Jumping
+			AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
 
-        // only allow jumping if we are running.
-        if (stateInfo.IsName("Base Layer.Run"))
-        {
-            // When using trigger parameter
-            if (Input.GetButtonDown("Fire2"))
-            {
-                animator.SetTrigger("Jump");
-            }
-        }
-        float h = Input.GetAxis("Horizontal");
-        float v = Input.GetAxis("Vertical");
-        if (v < 0)
-        {
-            v = 0;
-        }
-        animator.SetFloat("Speed", h * h + v * v);
-        animator.SetFloat("Direction", h, directionDampTime, Time.deltaTime);
-        //animator.SetFloat("vertical", v);
-        //animator.SetFloat("horizontal", h);
+			// only allow jumping if we are running.
+			if (stateInfo.IsName("Base Layer.Run"))
+			{
+				// When using trigger parameter
+				if (Input.GetButtonDown("Fire2")) animator.SetTrigger("Jump");
+			}
 
-    }
+			if (SystemInfo.deviceType == DeviceType.Desktop)
+			{
+				// deal with movement
+				float h = Input.GetAxis("Horizontal");
+				float v = Input.GetAxis("Vertical");
 
-    #endregion
+				Debug.Log("ONE MOVE");
+				Debug.Log("moveforward" + h);
+				Debug.Log("moveforward" + v);
+
+				// prevent negative Speed.
+				if (v < 0)
+				{
+					v = 0;
+				}
+
+				// set the Animator Parameters
+				animator.SetFloat("Speed", h * h + v * v);
+				animator.SetFloat("Direction", h, directionDampTime, Time.deltaTime);
+			}
+			else if (SystemInfo.deviceType == DeviceType.Desktop)
+			{
+				//animator.SetFloat("Speed", h * h + v * v);
+				//animator.SetFloat("Direction", h, directionDampTime, Time.deltaTime);
+			}
+		}
+
+		#endregion
+
+	}
 }

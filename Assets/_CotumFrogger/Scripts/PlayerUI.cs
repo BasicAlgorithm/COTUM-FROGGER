@@ -1,117 +1,125 @@
-using System.Collections;
-using System.Collections.Generic;
+﻿
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerUI : MonoBehaviour
+namespace COTUM
 {
-    #region Private Fields
+	#pragma warning disable 649
 
-
-    [Tooltip("UI Text to display Player's Name")]
-    [SerializeField]
-    private Text playerNameText;
-
-
-    [Tooltip("UI Slider to display Player's Health")]
-    [SerializeField]
-    private Slider playerHealthSlider;
-
-    private PlayerManager target;
-
-    // UI following Frog
-    float characterControllerHeight = 0f;
-    Transform targetTransform;
-    Renderer targetRenderer;
-    CanvasGroup _canvasGroup;
-    Vector3 targetPosition;
-
-    #endregion
-
-    #region Public Fields
-
-    [Tooltip("Pixel offset from the player target")]
-    [SerializeField]
-    private Vector3 screenOffset = new Vector3(0f, 30f, 0f);
-
-    #endregion
-
-    #region MonoBehaviour Callbacks
-
-    void Awake()
+	// Player UI. Constraint the UI to follow a PlayerManager GameObject in the world,
+	// Affect a slider and text to display Player's name and health
+	public class PlayerUI : MonoBehaviour
     {
-        this.transform.SetParent(GameObject.Find("Canvas").GetComponent<Transform>(), false);
+        #region Private Fields
 
-        // UI following Frog
-        _canvasGroup = this.GetComponent<CanvasGroup>();
-    }
+	    [Tooltip("Pixel offset from the player target")]
+        [SerializeField]
+        private Vector3 screenOffset = new Vector3(0f, 30f, 0f);
 
-    void Update()
-    {
-        // Reflect the Player Health
-        if (playerHealthSlider != null)
-        {
-            playerHealthSlider.value = target.Health;
-        }
+	    [Tooltip("UI Text to display Player's Name")]
+	    [SerializeField]
+	    private Text playerNameText;
 
-        // Destroy itself if the target is null, It's a fail safe when Photon is destroying Instances of a Player over the network
-        if (target == null)
-        {
-            Destroy(this.gameObject);
-            return;
-        }
-    }
+	    [Tooltip("UI Slider to display Player's Health")]
+	    [SerializeField]
+	    private Slider playerHealthSlider;
 
-    void LateUpdate()
-    {
-        // Do not show the UI if we are not visible to the camera, thus avoid potential bugs with seeing the UI, but not the player itself.
-        if (targetRenderer != null)
-        {
-            this._canvasGroup.alpha = targetRenderer.isVisible ? 1f : 0f;
-        }
+        PlayerManager target;
 
-        // #Critical
-        // Follow the Target GameObject on screen.
-        if (targetTransform != null)
-        {
-            targetPosition = targetTransform.position;
-            targetPosition.y += characterControllerHeight;
-            this.transform.position = Camera.main.WorldToScreenPoint(targetPosition) + screenOffset;
-        }
-    }
+		float characterControllerHeight;
 
-    #endregion
+		Transform targetTransform;
 
+		Renderer targetRenderer;
 
-    #region Public Methods
+	    CanvasGroup _canvasGroup;
+	    
+		Vector3 targetPosition;
 
-    public void SetTarget(PlayerManager _target)
-    {
-        if (_target == null)
-        {
-            Debug.LogError("COTUM: PLAYERUI PlayMakerManager target for PlayerUI.SetTarget.", this);
-            return;
-        }
-        // Cache references for efficiency
-        target = _target;
+		#endregion
 
-        // UI following Frog
-        targetTransform = this.target.GetComponent<Transform>();
-        targetRenderer = this.target.GetComponent<Renderer>();
-        CharacterController characterController = _target.GetComponent<CharacterController>();
-        // Get data from the Player that won't change during the lifetime of this Component
-        if (characterController != null)
-        {
-            characterControllerHeight = characterController.height;
-        }
+		#region MonoBehaviour Messages
+		
+		// MonoBehaviour method called on GameObject by Unity during early initialization phase
+		void Awake()
+		{
 
-        if (playerNameText != null)
-        {
-            playerNameText.text = target.photonView.Owner.NickName;
-        }
-    }
+			_canvasGroup = this.GetComponent<CanvasGroup>();
+			
+			this.transform.SetParent(GameObject.Find("Canvas").GetComponent<Transform>(), false);
+		}
 
-    #endregion
+		// MonoBehaviour method called on GameObject by Unity on every frame.
+		// update the health slider to reflect the Player's health
+		void Update()
+		{
+			// Destroy itself if the target is null, It's a fail safe when Photon is destroying Instances of a Player over the network
+			if (target == null) {
+				Destroy(this.gameObject);
+				return;
+			}
 
 
+			// Reflect the Player Health
+			if (playerHealthSlider != null) {
+				playerHealthSlider.value = target.Health;
+			}
+		}
+
+		// MonoBehaviour method called after all Update functions have been called. This is useful to order script execution.
+		// In our case since we are following a moving GameObject, we need to proceed after the player was moved during a particular frame.
+		void LateUpdate () {
+
+			// Do not show the UI if we are not visible to the camera, thus avoid potential bugs with seeing the UI, but not the player itself.
+			if (targetRenderer!=null)
+			{
+				this._canvasGroup.alpha = targetRenderer.isVisible ? 1f : 0f;
+			}
+			
+			// #Critical
+			// Follow the Target GameObject on screen.
+			if (targetTransform!=null)
+			{
+				targetPosition = targetTransform.position;
+				targetPosition.y += characterControllerHeight;
+				
+				this.transform.position = Camera.main.WorldToScreenPoint (targetPosition) + screenOffset;
+			}
+
+		}
+
+		#endregion
+
+		#region Public Methods
+
+		// Assigns a Player Target to Follow and represent.
+		// <param name="target">Target.</param>
+		public void SetTarget(PlayerManager _target){
+
+			if (_target == null) {
+				Debug.LogError("<Color=Red><b>Missing</b></Color> PlayMakerManager target for PlayerUI.SetTarget.", this);
+				return;
+			}
+
+			// Cache references for efficiency because we are going to reuse them.
+			this.target = _target;
+            targetTransform = this.target.GetComponent<Transform>();
+            targetRenderer = this.target.GetComponentInChildren<Renderer>();
+
+
+            CharacterController _characterController = this.target.GetComponent<CharacterController> ();
+
+			// Get data from the Player that won't change during the lifetime of this Component
+			if (_characterController != null){
+				characterControllerHeight = _characterController.height;
+			}
+
+			if (playerNameText != null) {
+                playerNameText.text = this.target.photonView.Owner.NickName;
+			}
+		}
+
+		#endregion
+
+	}
 }

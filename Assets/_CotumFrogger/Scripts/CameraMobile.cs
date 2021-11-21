@@ -8,17 +8,6 @@ using UnityEngine.UI;
 
 public class CameraMobile : MonoBehaviour
 {
-    #region Private Fields
-
-    // We have to implement this animator. PhotonAnimatorView catch this animator
-    // and their data to transmit to others player.
-    //private Animator animator;
-
-    // maintain a flag internally to reconnect if target is lost or camera is switched
-    bool isFollowing;
-
-    #endregion
-
     [SerializeField, FilePopup("*.tflite")] string palmModelFile;
     [SerializeField, FilePopup("*.tflite")] string landmarkModelFile;
 
@@ -37,14 +26,31 @@ public class CameraMobile : MonoBehaviour
     UniTask<bool> task;
     CancellationToken cancellationToken;
 
-    enum Actions {FIST, PALM, NOTHING}
+    enum Actions { FIST, PALM, NOTHING }
     Actions CurrentAction = Actions.NOTHING;
-    
+
     Rigidbody m_Rb;
     float m_Speed = 2.0f;
 
     void Start()
     {
+        Debug.Log("CAMERA MOBILE ONSTART CALLED");
+
+        string palmPath = Path.Combine(Application.streamingAssetsPath, palmModelFile);
+        palmDetect = new PalmDetect(palmPath);
+
+        string landmarkPath = Path.Combine(Application.streamingAssetsPath, landmarkModelFile);
+        landmarkDetect = new HandLandmarkDetect(landmarkPath);
+        Debug.Log($"landmark dimension: {landmarkDetect.Dim}");
+
+        string cameraName = WebCamUtil.FindName(WebCamKind.WideAngle, false);
+        webcamTexture = new WebCamTexture(cameraName, 1280, 720, 30);
+        cameraView.texture = webcamTexture;
+        webcamTexture.Play();
+        Debug.Log($"Starting camera: {cameraName}");
+
+        draw = new PrimitiveDraw();
+        m_Rb = GetComponent<Rigidbody>();
     }
 
     void OnDestroy()
@@ -56,8 +62,6 @@ public class CameraMobile : MonoBehaviour
 
     void Update()
     {
-        if (isFollowing)
-        {
             if (runBackground)
             {
                 if (task.Status.IsCompleted())
@@ -80,7 +84,6 @@ public class CameraMobile : MonoBehaviour
             if (landmarkResult == null || landmarkResult.score < 0.3f) return;
 
             UpdateJoint(landmarkResult.joints);
-        }
     }
 
     void Invoke()
@@ -111,7 +114,8 @@ public class CameraMobile : MonoBehaviour
         return true;
     }
 
-    void MoveForward() {
+    void MoveForward()
+    {
         transform.position += Camera.main.transform.forward * Time.deltaTime * m_Speed;
     }
 
@@ -137,7 +141,6 @@ public class CameraMobile : MonoBehaviour
         {
             draw.Cube(worldJoints[i], 0.1f);
         }
-
         var connections = HandLandmarkDetect.CONNECTIONS;
         for (int i = 0; i < connections.Length; i += 2)
         {
@@ -149,57 +152,26 @@ public class CameraMobile : MonoBehaviour
         draw.Apply();
         */
 
-        Vector3[] uppperJoints = {worldJoints[8], worldJoints[12], worldJoints[16], worldJoints[20]};
+        Vector3[] uppperJoints = { worldJoints[8], worldJoints[12], worldJoints[16], worldJoints[20] };
         Vector3 thumb = worldJoints[4];
         bool fist = true;
         bool palm = true;
 
-        foreach (var fg in uppperJoints){
+        foreach (var fg in uppperJoints)
+        {
             fist = fist && (fg.y < thumb.y);
         }
-        foreach (var fg in uppperJoints){
+        foreach (var fg in uppperJoints)
+        {
             palm = palm && (fg.y > thumb.y);
         }
-        if (fist){
+        if (fist)
+        {
             CurrentAction = Actions.FIST;
         }
-        if (palm) {
+        if (palm)
+        {
             CurrentAction = Actions.PALM;
         }
     }
-
-    #region Public Methods
-
-    // cached transform of the target
-    Transform cameraTransform;
-
-    // Cache for camera offset
-    Vector3 cameraOffset = Vector3.zero;
-
-    // Raises the start following event. 
-    // Use this when you don't know at the time of editing what to follow, typically instances managed by the photon network.
-    public void OnStart()
-    {
-        Debug.Log("CAMERA MOBILE ONSTART CALLED");
-
-        string palmPath = Path.Combine(Application.streamingAssetsPath, palmModelFile);
-        palmDetect = new PalmDetect(palmPath);
-
-        string landmarkPath = Path.Combine(Application.streamingAssetsPath, landmarkModelFile);
-        landmarkDetect = new HandLandmarkDetect(landmarkPath);
-        Debug.Log($"landmark dimension: {landmarkDetect.Dim}");
-
-        string cameraName = WebCamUtil.FindName(WebCamKind.WideAngle, false);
-        webcamTexture = new WebCamTexture(cameraName, 1280, 720, 30);
-        cameraView.texture = webcamTexture;
-        webcamTexture.Play();
-        Debug.Log($"Starting camera: {cameraName}");
-
-        draw = new PrimitiveDraw();
-        m_Rb = GetComponent<Rigidbody>();
-
-        isFollowing = true;
-    }
-
-    #endregion
 }

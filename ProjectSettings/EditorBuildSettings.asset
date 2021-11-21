@@ -6,56 +6,16 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_CotumFrogger/Scenes/MenuRoom.unity
-    guid: 0c1c045fe4f08334cbd5924c3bac07e7
+    path: Assets/_CotumFrogger/Scenes/MainMobile.unity
+    guid: 3ff9b1b0d4a94d5468389106f403e9bf
+  - enabled: 0
+    path: Assets/_CotumFrogger/Scenes/MainDesktop.unity
+    guid: ea084053f4f1c0645aee9db5adc9ef23
   - enabled: 1
-    path: Assets/_CotumFrogger/Scenes/FIrstLevel.unity
-    guid: 4ceee8795568095468c1b68f9863bf9c
+    path: Assets/_CotumFrogger/Scenes/FirstLevel.unity
+    guid: 53b2239c11d03f649a179168ac138d12
   - enabled: 1
     path: Assets/_CotumFrogger/Scenes/LoseRoom.unity
-    guid: 85b53adbaba82e649b3773d7acb53821
-  - enabled: 0
-    path: Assets/_CotumFrogger/Scenes/TMultiplayerRoom.unity
-    guid: b3de2ccc72750af4fa6ab86cd8ee1545
-  - enabled: 0
-    path: Assets/_CotumFrogger/Scenes/TGameRoom.unity
-    guid: 139723a764e82824c8a158b7caff14fe
-  - enabled: 0
-    path: Assets/Scenes/BaseScene/Scenes/BaseScene.unity
-    guid: 5472f829d0a75124f88d7633babd92e1
-  - enabled: 0
-    path: Assets/Scenes/BaseScene/Scenes/VrMode.unity
-    guid: 4812ec05e87b8414abcdfe0d625c0e60
-  - enabled: 0
-    path: Assets/TextSpeech/SpeechAndText/Sample/SampleSpeechToText.unity
-    guid: d9447599b4cad0245ac00fa552c354b6
-  - enabled: 0
-    path: Assets/Scenes/FirstLevel/Scenes/FIrstLevel.unity
-    guid: c99f59f187b7dd748ac76f30acfcf8d6
-  - enabled: 0
-    path: Assets/_CotumFrogger/Scenes/TMovActions.unity
-    guid: b6e7be8a82a1c2d4c9899d53db80d5bd
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: Assets/Photon/PhotonUnityNetworking/Demos/PunBasics-Tutorial/Scenes/PunBasics-Launcher.unity
-    guid: bff77b01b50254edbb6edeeaba5ae8b3
-  - enabled: 0
-    path: Assets/Photon/PhotonUnityNetworking/Demos/PunBasics-Tutorial/Scenes/PunBasics-Room
-      for 1.unity
-    guid: 9b8561c6e396849a5ba48c3eb9524049
-  - enabled: 0
-    path: Assets/Photon/PhotonUnityNetworking/Demos/PunBasics-Tutorial/Scenes/PunBasics-Room
-      for 2.unity
-    guid: 764428c63577f4580af4ce54ca9f4b1b
-  - enabled: 0
-    path: Assets/Photon/PhotonUnityNetworking/Demos/PunBasics-Tutorial/Scenes/PunBasics-Room
-      for 3.unity
-    guid: e07afcca5bf1a41f5bd28f498656b7b8
-  - enabled: 0
-    path: Assets/Photon/PhotonUnityNetworking/Demos/PunBasics-Tutorial/Scenes/PunBasics-Room
-      for 4.unity
-    guid: e7a7f9734636d415ca84ef3aaf7680f6
+    guid: 31afec97ecd9ee644b30c6752b1d7d45
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 0df915e4af5ab3343b6d8301f9c52c24, type: 2}
