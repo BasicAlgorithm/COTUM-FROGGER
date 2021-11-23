@@ -114,7 +114,7 @@ namespace COTUM
             else if (SystemInfo.deviceType == DeviceType.Handheld)
             {
                 // prefab follow rotation of camera
-                transform.rotation = Quaternion.Euler(new Vector3(0.0f, Camera.main.transform.eulerAngles.y, 0.0f));
+                //transform.rotation = Quaternion.Euler(new Vector3(0.0f, Camera.main.transform.eulerAngles.y, 0.0f));
                 
                 // camera follow position of prefab (it doesnt work yet)
                 //Camera.main.transform.position = transform.position;

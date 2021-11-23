@@ -77,7 +77,8 @@ namespace COTUM
                     else if (SystemInfo.deviceType == DeviceType.Handheld)
                     {
                         Debug.Log("COTUM: GM.FROGNORMAL created because I am on mobile");
-                        PhotonNetwork.Instantiate(this.playerPrefabMobile.name, new Vector3(Random.Range(-10f,10f), 5f, 0f), Quaternion.identity, 0);
+                        GameObject character_prefab = (GameObject)PhotonNetwork.Instantiate(this.playerPrefabMobile.name, new Vector3(Random.Range(-10f,10f), 5f, 0f), Quaternion.identity, 0);
+                        Camera.main.transform.parent = character_prefab.transform;
                     }
                     else
                     {
