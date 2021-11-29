@@ -31284,6 +31284,7 @@ Transform:
   - {fileID: 107811193}
   - {fileID: 607548624}
   - {fileID: 2077931368}
+  - {fileID: 1577371511}
   - {fileID: 105055187}
   - {fileID: 172318392}
   - {fileID: 851045902}
@@ -31311,7 +31312,6 @@ Transform:
   - {fileID: 1945816921}
   - {fileID: 1636502522}
   - {fileID: 1949961230}
-  - {fileID: 1577371511}
   - {fileID: 826769}
   - {fileID: 1522836186}
   - {fileID: 1849958408}
@@ -31442,6 +31442,7 @@ Transform:
   - {fileID: 18842992}
   - {fileID: 1166167036}
   - {fileID: 1098341772}
+  - {fileID: 1875360508}
   - {fileID: 426787070}
   - {fileID: 1272950505}
   - {fileID: 1825295863}
@@ -31462,7 +31463,6 @@ Transform:
   - {fileID: 864007156}
   - {fileID: 1942173314}
   - {fileID: 1554455854}
-  - {fileID: 1875360508}
   - {fileID: 541022682}
   - {fileID: 1623497218}
   - {fileID: 903871791}
@@ -40330,7 +40330,7 @@ Transform:
   m_LocalScale: {x: 0.5960999, y: 0.59610003, z: 0.59610003}
   m_Children: []
   m_Father: {fileID: 1206225254}
-  m_RootOrder: 238
+  m_RootOrder: 211
   m_LocalEulerAnglesHint: {x: -0.017, y: -89.589, z: 0.299}
 --- !u!136 &1577371512
 CapsuleCollider:
@@ -48958,7 +48958,7 @@ Transform:
   m_LocalScale: {x: 0.59609985, y: 0.5961, z: 0.59609985}
   m_Children: []
   m_Father: {fileID: 1206225254}
-  m_RootOrder: 389
+  m_RootOrder: 369
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &1875360509
 CapsuleCollider:

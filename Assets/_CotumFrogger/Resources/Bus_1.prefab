@@ -337,6 +337,8 @@ GameObject:
   - component: {fileID: 7599120381870001698}
   - component: {fileID: 7599120381870001725}
   - component: {fileID: 3487641755712751716}
+  - component: {fileID: -757955772991960070}
+  - component: {fileID: 8153167189737854263}
   m_Layer: 0
   m_Name: Bus_1
   m_TagString: SomeCar
@@ -428,10 +430,43 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   observableSearch: 2
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: -757955772991960070}
+  - {fileID: 8153167189737854263}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &-757955772991960070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7598568746016781666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
+--- !u!114 &8153167189737854263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7598568746016781666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74ede7dd89b0d434c827c5a4249e9c7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 1
+  playerUiPrefab: {fileID: 0}
+  beams: {fileID: 0}
 --- !u!1 &7599448435926391166
 GameObject:
   m_ObjectHideFlags: 0
