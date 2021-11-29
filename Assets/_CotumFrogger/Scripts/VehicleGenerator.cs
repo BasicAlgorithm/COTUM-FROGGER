@@ -11,9 +11,13 @@ public class VehicleGenerator : MonoBehaviour
     public float pos_initial_y;
     public float pos_initial_z;
     public float pos_end_z;
-    float direction;
     void Start()
     {
+         if (mov_left_right == -1) {
+            transform.eulerAngles = new Vector3(0f, 180f, 0f);
+         } else {
+            transform.eulerAngles = new Vector3(0f, 0f, 0f);
+         }
         transform.position = new Vector3(pos_initial_x, pos_initial_y, pos_initial_z);
     }
 
@@ -21,10 +25,8 @@ public class VehicleGenerator : MonoBehaviour
     void Update()
     {
         transform.Translate(0.0f, 0.0f, velocity * Time.deltaTime);
-
-        if ((mov_left_right * transform.position.z) > (pos_end_z* mov_left_right))
-        {
-            transform.position = new Vector3(pos_initial_x, pos_initial_y, pos_initial_z);
+        if ((mov_left_right * transform.position.z) > (pos_end_z * mov_left_right)) {
+            Start();
         }
     }
 }

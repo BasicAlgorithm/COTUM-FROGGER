@@ -238,7 +238,7 @@ MonoBehaviour:
   palmModelFile: mediapipe/palm_detection_builtin_256_float16_quant.tflite
   landmarkModelFile: mediapipe/hand_landmark.tflite
   cameraView: {fileID: 5188390169662089596}
-  runBackground: 0
+  runBackground: 1
   SmoothSpeedMobile: 1.5
 --- !u!1 &5188390169662089539
 GameObject:

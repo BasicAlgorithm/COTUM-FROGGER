@@ -18,6 +18,8 @@ namespace Photon.Pun.Demo.PunBasics
 
         [SerializeField]
 	    private float directionDampTime = 0.25f;
+		[SerializeField]
+	    private float speedMultiplier = 0.25f;
         Animator animator;
 
 		#endregion
@@ -71,7 +73,7 @@ namespace Photon.Pun.Demo.PunBasics
             }
 
 			// set the Animator Parameters
-            animator.SetFloat( "Speed", h*h+v*v );
+            animator.SetFloat( "Speed", (h*h+v*v) * speedMultiplier );
             animator.SetFloat( "Direction", h, directionDampTime, Time.deltaTime );
 	    }
 

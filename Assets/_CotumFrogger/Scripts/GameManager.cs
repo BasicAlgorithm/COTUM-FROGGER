@@ -29,6 +29,15 @@ namespace COTUM
         [SerializeField]
         private GameObject playerPrefabMobile;
 
+        [SerializeField]
+        private GameObject combiPrefab;
+        [SerializeField]
+        private GameObject taxiPrefab;
+        [SerializeField]
+        private GameObject policePrefab;
+        [SerializeField]
+        private GameObject combi2Prefab;
+
         #endregion
 
         #region MonoBehaviour CallBacks
@@ -58,12 +67,10 @@ namespace COTUM
 
             if (playerPrefabDesktop == null)
             { // #Tip Never assume public properties of Components are filled up properly, always check and inform the developer of it.
-
                 Debug.LogError("COTUM: GM.START() playerPrefab Reference. Please set it up in GameObject 'Game Manager'", this);
             }
             else
             {
-
                 if (PlayerManager.LocalPlayerInstance == null)
                 {
                     Debug.LogFormat("COTUM: GM.We are Instantiating LocalPlayer from {0}", SceneManagerHelper.ActiveSceneName);
@@ -72,22 +79,22 @@ namespace COTUM
                     if (SystemInfo.deviceType == DeviceType.Desktop)
                     {
                         Debug.Log("COTUM: GM.FROGBOT created because I am on desktop");
-                        PhotonNetwork.Instantiate(this.playerPrefabDesktop.name, new Vector3(Random.Range(-10f, 10f), 5f, 0f), Quaternion.identity, 0);
+                        PhotonNetwork.Instantiate(this.playerPrefabDesktop.name, new Vector3(34.5f, -2.3f, Random.Range(15.0f,55.0f)), Quaternion.identity, 0);
                     }
                     else if (SystemInfo.deviceType == DeviceType.Handheld)
                     {
                         Debug.Log("COTUM: GM.FROGNORMAL created because I am on mobile");
-                        GameObject character_prefab = (GameObject)PhotonNetwork.Instantiate(this.playerPrefabMobile.name, new Vector3(Random.Range(-10f,10f), 5f, 0f), Quaternion.identity, 0);
+                        GameObject character_prefab = (GameObject)PhotonNetwork.Instantiate(this.playerPrefabMobile.name, new Vector3(34.5f, -2.3f, Random.Range(15.0f,55.0f)), Quaternion.identity, 0);
                         Camera.main.transform.parent = character_prefab.transform;
                     }
                     else
                     {
                         Debug.LogError("COTUM: GM.start(): We can't create a prefab due to your device.", this);
                     }
+                    LoadCars();
                 }
                 else
                 {
-
                     Debug.LogFormat("COTUM: GM.Ignoring scene load for {0}", SceneManagerHelper.ActiveSceneName);
                 }
 
@@ -115,7 +122,6 @@ namespace COTUM
             if (PhotonNetwork.IsMasterClient)
             {
                 Debug.LogFormat("COTUM: GM.OnPlayerEnteredRoom IsMasterClient {0}", PhotonNetwork.IsMasterClient); // called before OnPlayerLeftRoom
-
                 LoadArena();
             }
         }
@@ -131,7 +137,6 @@ namespace COTUM
             {
                 // called before OnPlayerLeftRoom
                 Debug.LogFormat("COTUM: GM.OnPlayerEnteredRoom IsMasterClient {0}", PhotonNetwork.IsMasterClient);
-
                 LoadArena();
             }
         }
@@ -183,8 +188,30 @@ namespace COTUM
             PhotonNetwork.LoadLevel("FirstLevel");
         }
 
+        void LoadCars() {
+            Vector3[] cars = new [] {
+                new Vector3(33.5f, -3.5f, 5f), new Vector3(31.5f, -3.5f, 70f),
+                new Vector3(21.7f, -3.5f, 5f), new Vector3(19.7f, -3.5f, 70f),
+                new Vector3(15.5f, -3.5f, 5f), new Vector3(13.5f, -3.5f, 70f),
+                new Vector3(3f, -3.5f, 5f), new Vector3(-4.5f, -3.5f, 70f),
+                new Vector3(-14.5f, -3.5f, 5f), new Vector3(-16.5f, -3.5f, 70f),
+                new Vector3(-20.5f, -3.5f, 5f), new Vector3(-22.9f, -3.5f, 70f),
+                new Vector3(-32.5f, -3.5f, 5f), new Vector3(-34.9f, -3.5f, 70f),
+            };
+            string[] prefabs = {this.combiPrefab.name, this.taxiPrefab.name, this.policePrefab.name, this.combi2Prefab.name};
+            if (PhotonNetwork.IsMasterClient) {
+                for (int i = 0; i < cars.Length; ++i) {
+                    GameObject new_car = (GameObject)PhotonNetwork.Instantiate(prefabs[i%4], new Vector3(0, 0, 0), Quaternion.identity, 0);
+                    new_car.GetComponent<VehicleGenerator>().velocity = 12f - (i%3) * 1.5f;
+                    new_car.GetComponent<VehicleGenerator>().mov_left_right = (i % 2 == 0 ? 1 : -1);
+                    new_car.GetComponent<VehicleGenerator>().pos_initial_x = cars[i].x;
+                    new_car.GetComponent<VehicleGenerator>().pos_initial_y = cars[i].y;
+                    new_car.GetComponent<VehicleGenerator>().pos_initial_z = cars[i].z;
+                    new_car.GetComponent<VehicleGenerator>().pos_end_z = cars[i].z + (i % 2 == 0 ? 65 : -65);
+                }
+            }
+        }
+
         #endregion
-
     }
-
 }
