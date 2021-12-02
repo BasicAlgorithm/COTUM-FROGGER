@@ -7293,6 +7293,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f9343ed25b51a0498a2233cad28b452, type: 3}
+--- !u!114 &297335688 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3218638770849596801, guid: 0f9343ed25b51a0498a2233cad28b452, type: 3}
+  m_PrefabInstance: {fileID: 297335687}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cd3a56b7dc669d459107a6fba35d05c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &297794168
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31251,6 +31262,7 @@ Transform:
   - {fileID: 2012554375}
   - {fileID: 805564831}
   - {fileID: 1190525945}
+  - {fileID: 1577371511}
   - {fileID: 18403028}
   - {fileID: 1149791985}
   - {fileID: 1459760203}
@@ -31284,7 +31296,6 @@ Transform:
   - {fileID: 107811193}
   - {fileID: 607548624}
   - {fileID: 2077931368}
-  - {fileID: 1577371511}
   - {fileID: 105055187}
   - {fileID: 172318392}
   - {fileID: 851045902}
@@ -31423,6 +31434,7 @@ Transform:
   - {fileID: 1820936945}
   - {fileID: 1063434336}
   - {fileID: 955169885}
+  - {fileID: 1875360508}
   - {fileID: 135338375}
   - {fileID: 1982163258}
   - {fileID: 540040391}
@@ -31442,7 +31454,6 @@ Transform:
   - {fileID: 18842992}
   - {fileID: 1166167036}
   - {fileID: 1098341772}
-  - {fileID: 1875360508}
   - {fileID: 426787070}
   - {fileID: 1272950505}
   - {fileID: 1825295863}
@@ -40330,7 +40341,7 @@ Transform:
   m_LocalScale: {x: 0.5960999, y: 0.59610003, z: 0.59610003}
   m_Children: []
   m_Father: {fileID: 1206225254}
-  m_RootOrder: 211
+  m_RootOrder: 178
   m_LocalEulerAnglesHint: {x: -0.017, y: -89.589, z: 0.299}
 --- !u!136 &1577371512
 CapsuleCollider:
@@ -48026,7 +48037,7 @@ PrefabInstance:
     - target: {fileID: 11478194, guid: b19bb80838bcf4457bf6f50a19c5593b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 297335688}
     - target: {fileID: 22478194, guid: b19bb80838bcf4457bf6f50a19c5593b, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -48958,7 +48969,7 @@ Transform:
   m_LocalScale: {x: 0.59609985, y: 0.5961, z: 0.59609985}
   m_Children: []
   m_Father: {fileID: 1206225254}
-  m_RootOrder: 369
+  m_RootOrder: 350
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &1875360509
 CapsuleCollider:

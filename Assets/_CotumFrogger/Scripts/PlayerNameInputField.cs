@@ -16,14 +16,17 @@ namespace COTUM
 		#endregion
 
 		#region MonoBehaviour CallBacks
-		
-		// MonoBehaviour method called on GameObject by Unity during initialization phase.
-		void Start () {
-		
-			string defaultName = "mobile" + Random.Range(1, 10).ToString();
+
+		/// <summary>
+		/// MonoBehaviour method called on GameObject by Unity during initialization phase.
+		/// </summary>
+		void Start()
+		{
+
+			string defaultName = string.Empty;
 			InputField _inputField = this.GetComponent<InputField>();
 
-			if (_inputField!=null)
+			if (_inputField != null)
 			{
 				if (PlayerPrefs.HasKey(playerNamePrefKey))
 				{
@@ -32,28 +35,30 @@ namespace COTUM
 				}
 			}
 
-			PhotonNetwork.NickName =	defaultName;
+			PhotonNetwork.NickName = defaultName;
 		}
 
 		#endregion
-		
+
 		#region Public Methods
 
-		// Sets the name of the player, and save it in the PlayerPrefs for future sessions.
-		// <param name="value">The name of the Player</param>
+		/// <summary>
+		/// Sets the name of the player, and save it in the PlayerPrefs for future sessions.
+		/// </summary>
+		/// <param name="value">The name of the Player</param>
 		public void SetPlayerName(string value)
 		{
 			// #Important
-		    if (string.IsNullOrEmpty(value))
-		    {
-                Debug.LogError("Player Name is null or empty");
-		        return;
-		    }
+			if (string.IsNullOrEmpty(value))
+			{
+				Debug.LogError("Player Name is null or empty");
+				return;
+			}
 			PhotonNetwork.NickName = value;
 
 			PlayerPrefs.SetString(playerNamePrefKey, value);
 		}
-		
+
 		#endregion
 	}
 }
