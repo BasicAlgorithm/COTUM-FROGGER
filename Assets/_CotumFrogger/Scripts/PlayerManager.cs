@@ -13,6 +13,9 @@ namespace COTUM
         [Tooltip("The current Health of our player")]
         public float Health = 1f;
 
+        [Tooltip("The current Health of our player")]
+        public bool PlayerAlive = true;
+
         [Tooltip("The local player instance. Use this to know if the local player is represented in the Scene")]
         public static GameObject LocalPlayerInstance;
 
@@ -23,6 +26,10 @@ namespace COTUM
         [Tooltip("The Player's UI GameObject Prefab")]
         [SerializeField]
         private GameObject playerUiPrefab;
+
+        [Tooltip("The Tombstone Prefab")]
+        [SerializeField]
+        private GameObject tombstonePrefab;
 
         [Tooltip("The Beams GameObject to control")]
         [SerializeField]
@@ -119,6 +126,7 @@ namespace COTUM
                 {
                     GameManager.Instance.LeaveRoom();
                 }
+                gameObject.SetActive(this.PlayerAlive);
             }
 
             if (this.beams != null && this.IsFiring != this.beams.activeInHierarchy)
@@ -138,15 +146,30 @@ namespace COTUM
                 return;
             }
 
-
             // We are only interested in Beamers
             // we should be using tags but for the sake of distribution, let's simply check by name.
-            if (!other.name.Contains("Beam"))
+            if (other.name.Contains("Beam"))
             {
-                return;
+                this.Health -= 0.1f;
             }
-
-            this.Health -= 0.1f;
+            if (other.tag.Contains("SomeCar"))
+            {
+                this.PlayerAlive = false;
+                GameObject tombstone = PhotonNetwork.Instantiate(this.tombstonePrefab.name, this.transform.position, Quaternion.identity, 0);
+                tombstone.GetComponent<TombstoneState>().id = photonView.ViewID;
+                Debug.Log("YOU LOSE");
+                Debug.Log(tombstone.GetComponent<TombstoneState>().id);
+                //SceneManager.LoadScene("LoseRoom");
+            }
+            else if (other.tag.Contains("WinObject"))
+            {
+                Debug.Log("YOU WIN");
+                //SceneManager.LoadScene("MenuRoom");
+            }
+            else if (other.tag.Contains("Tombstone"))
+            {
+                Debug.Log("Reviviendo al jugador");
+            }
         }
 
         // MonoBehaviour method called once per frame for every Collider 'other' that is touching the trigger.
@@ -246,12 +269,14 @@ namespace COTUM
                 // We own this player: send the others our data
                 stream.SendNext(this.IsFiring);
                 stream.SendNext(this.Health);
+                stream.SendNext(this.PlayerAlive);
             }
             else
             {
                 // Network player, receive data
                 this.IsFiring = (bool)stream.ReceiveNext();
                 this.Health = (float)stream.ReceiveNext();
+                this.PlayerAlive = (bool)stream.ReceiveNext();
             }
         }
 

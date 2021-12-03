@@ -580,7 +580,6 @@ GameObject:
   - component: {fileID: 2824321419567681547}
   - component: {fileID: 2824321421495644377}
   - component: {fileID: 3270715221606767422}
-  - component: {fileID: 4730529638106862372}
   m_Layer: 0
   m_Name: FrogBotGreen
   m_TagString: Player
@@ -668,7 +667,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 1
+  PlayerAlive: 1
   playerUiPrefab: {fileID: 170056, guid: 49b3bdc212b28d54eb32bf06fe994712, type: 3}
+  tombstonePrefab: {fileID: 187312, guid: 6e131b51e1e3a994692dad30cc8065ec, type: 3}
   beams: {fileID: 2824321419561099319}
 --- !u!114 &2824321419567434345
 MonoBehaviour:
@@ -692,7 +693,7 @@ MonoBehaviour:
   - {fileID: 7167085235374572230}
   - {fileID: 2824321419567434347}
   - {fileID: 2824321419567681547}
-  - {fileID: 4730529638106862372}
+  - {fileID: 0}
   sceneViewId: 0
   InstantiationId: 1
   isRuntimeInstantiated: 0
@@ -796,19 +797,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.79, z: 1}
   m_Center: {x: 0, y: 0.89, z: 0}
---- !u!114 &4730529638106862372
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2824321419560910751}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa4423c85a676ba439aeb3c3348491cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tombstonePrefab: {fileID: 168578, guid: edd46fc5182e0d44c98fa6c5305dabb0, type: 3}
 --- !u!1 &2824321419560910785
 GameObject:
   m_ObjectHideFlags: 0
