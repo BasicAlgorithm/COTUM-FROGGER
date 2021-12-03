@@ -808,6 +808,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa4423c85a676ba439aeb3c3348491cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tombstonePrefab: {fileID: 168578, guid: edd46fc5182e0d44c98fa6c5305dabb0, type: 3}
 --- !u!1 &2824321419560910785
 GameObject:
   m_ObjectHideFlags: 0
