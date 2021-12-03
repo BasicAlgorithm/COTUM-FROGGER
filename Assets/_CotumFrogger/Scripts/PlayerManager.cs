@@ -161,18 +161,14 @@ namespace COTUM
                 Debug.Log(tombstone.GetComponent<TombstoneState>().id);
                 //SceneManager.LoadScene("LoseRoom");
             }
-            else if (other.tag.Contains("WinObject"))
-            {
-                Debug.Log("YOU WIN");
-                //SceneManager.LoadScene("MenuRoom");
-            }
-            /*else if (other.tag.Contains("Tombstone"))
+
+            else if (other.tag.Contains("Tombstone"))
             {
                 Debug.Log("Reviviendo al jugador");
                 int playerToRevivePrefabId = other.GetComponent<TombstoneState>().id;
                 PhotonView.Find(playerToRevivePrefabId).RPC("Revive", RpcTarget.AllBuffered);
                 Debug.Log("Jugador revivido");
-            }*/
+            }
         }
 
         /*[PunRPC]

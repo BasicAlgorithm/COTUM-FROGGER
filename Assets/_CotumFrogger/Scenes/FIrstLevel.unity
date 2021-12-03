@@ -31223,6 +31223,7 @@ Transform:
   - {fileID: 692543807}
   - {fileID: 442053294}
   - {fileID: 1006070408}
+  - {fileID: 1577371511}
   - {fileID: 33929019}
   - {fileID: 1516030054}
   - {fileID: 1578492896}
@@ -31262,7 +31263,6 @@ Transform:
   - {fileID: 2012554375}
   - {fileID: 805564831}
   - {fileID: 1190525945}
-  - {fileID: 1577371511}
   - {fileID: 18403028}
   - {fileID: 1149791985}
   - {fileID: 1459760203}
@@ -31412,6 +31412,7 @@ Transform:
   - {fileID: 114727232}
   - {fileID: 192847653}
   - {fileID: 367375942}
+  - {fileID: 1875360508}
   - {fileID: 202954120}
   - {fileID: 2102630397}
   - {fileID: 1652061644}
@@ -31434,7 +31435,6 @@ Transform:
   - {fileID: 1820936945}
   - {fileID: 1063434336}
   - {fileID: 955169885}
-  - {fileID: 1875360508}
   - {fileID: 135338375}
   - {fileID: 1982163258}
   - {fileID: 540040391}
@@ -40341,7 +40341,7 @@ Transform:
   m_LocalScale: {x: 0.5960999, y: 0.59610003, z: 0.59610003}
   m_Children: []
   m_Father: {fileID: 1206225254}
-  m_RootOrder: 178
+  m_RootOrder: 139
   m_LocalEulerAnglesHint: {x: -0.017, y: -89.589, z: 0.299}
 --- !u!136 &1577371512
 CapsuleCollider:
@@ -48950,6 +48950,7 @@ GameObject:
   - component: {fileID: 1875360511}
   - component: {fileID: 1875360510}
   - component: {fileID: 1875360509}
+  - component: {fileID: 1875360512}
   m_Layer: 0
   m_Name: CheckPoint (1)
   m_TagString: WinObject
@@ -48969,7 +48970,7 @@ Transform:
   m_LocalScale: {x: 0.59609985, y: 0.5961, z: 0.59609985}
   m_Children: []
   m_Father: {fileID: 1206225254}
-  m_RootOrder: 350
+  m_RootOrder: 328
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &1875360509
 CapsuleCollider:
@@ -48979,7 +48980,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1875360507}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2
@@ -49034,6 +49035,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1875360507}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1875360512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875360507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75ee3bf042ff742f28b2311eff82d39c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1879785269
 PrefabInstance:
   m_ObjectHideFlags: 0
