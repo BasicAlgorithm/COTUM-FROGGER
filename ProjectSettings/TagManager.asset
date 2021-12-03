@@ -6,6 +6,7 @@ TagManager:
   tags:
   - SomeCar
   - WinObject
+  - Tombstone
   layers:
   - Default
   - TransparentFX

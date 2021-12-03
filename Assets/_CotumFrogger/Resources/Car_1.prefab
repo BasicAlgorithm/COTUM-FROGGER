@@ -384,7 +384,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 1
+  PlayerAlive: 1
   playerUiPrefab: {fileID: 0}
+  tombstonePrefab: {fileID: 0}
   beams: {fileID: 0}
 --- !u!1 &4532349348081961093
 GameObject:
