@@ -169,7 +169,16 @@ namespace COTUM
             else if (other.tag.Contains("Tombstone"))
             {
                 Debug.Log("Reviviendo al jugador");
+                int playerToRevivePrefabId = other.GetComponent<TombstoneState>().id;
+                PhotonView.Find(playerToRevivePrefabId).RPC("Revive", RpcTarget.AllBuffered);
+                Debug.Log("Jugador revivido");
             }
+        }
+
+        [PunRPC]
+        public void Revive()
+        {
+            this.PlayerAlive = true;
         }
 
         // MonoBehaviour method called once per frame for every Collider 'other' that is touching the trigger.
