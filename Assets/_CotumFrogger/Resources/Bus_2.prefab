@@ -260,7 +260,7 @@ GameObject:
   - component: {fileID: 8874311798112785845}
   m_Layer: 0
   m_Name: Bus_2
-  m_TagString: Untagged
+  m_TagString: SomeCar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

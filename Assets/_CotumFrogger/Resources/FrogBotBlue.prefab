@@ -313,6 +313,8 @@ GameObject:
   - component: {fileID: 2351660062922986431}
   - component: {fileID: 6800724470929158013}
   - component: {fileID: 6318362484976486101}
+  - component: {fileID: 3991291662740309225}
+  - component: {fileID: 4956616020034269092}
   m_Layer: 0
   m_Name: FrogBotBlue
   m_TagString: Player
@@ -424,6 +426,7 @@ MonoBehaviour:
   - {fileID: 6831102645007808679}
   - {fileID: 4359225724704255323}
   - {fileID: 6800724470929158013}
+  - {fileID: 3991291662740309225}
   sceneViewId: 0
   InstantiationId: 1
   isRuntimeInstantiated: 0
@@ -514,6 +517,31 @@ MonoBehaviour:
   cameraView: {fileID: 0}
   runBackground: 1
   SmoothSpeedMobile: 1.5
+--- !u!114 &3991291662740309225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358487054155718271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa4423c85a676ba439aeb3c3348491cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &4956616020034269092
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358487054155718271}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.79, z: 1}
+  m_Center: {x: 0, y: 0.89, z: 0}
 --- !u!1 &1419270974257289142
 GameObject:
   m_ObjectHideFlags: 0

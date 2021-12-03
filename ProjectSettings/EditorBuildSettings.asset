@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/_CotumFrogger/Scenes/MainDesktop.unity
     guid: ea084053f4f1c0645aee9db5adc9ef23
   - enabled: 1
-    path: Assets/_CotumFrogger/Scenes/FirstLevel.unity
+    path: Assets/_CotumFrogger/Scenes/FIrstLevel.unity
     guid: 53b2239c11d03f649a179168ac138d12
   - enabled: 1
     path: Assets/_CotumFrogger/Scenes/LoseRoom.unity
