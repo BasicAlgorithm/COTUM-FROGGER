@@ -3,6 +3,7 @@ using UnityEngine.UI;
 
 using Photon.Realtime;
 using Photon.Pun;
+using System;
 
 namespace COTUM
 {
@@ -109,6 +110,11 @@ namespace COTUM
 				PhotonNetwork.ConnectUsingSettings();
                 PhotonNetwork.GameVersion = this.gameVersion;
 			}
+		}
+
+		public void SalirJuego()
+        {
+			Application.Quit();
 		}
 
 		// Logs the feedback in the UI view for the player, as opposed to inside the Unity Editor for the developer.

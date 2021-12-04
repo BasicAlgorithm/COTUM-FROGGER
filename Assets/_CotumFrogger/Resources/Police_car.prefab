@@ -419,7 +419,7 @@ GameObject:
   - component: {fileID: 2835630235600291067}
   - component: {fileID: 1769958843789090709}
   - component: {fileID: 8763326334328421729}
-  - component: {fileID: 677491706431551152}
+  - component: {fileID: 5150236160280519935}
   m_Layer: 0
   m_Name: Police_car
   m_TagString: SomeCar
@@ -493,6 +493,12 @@ MonoBehaviour:
   pos_initial_y: 0
   pos_initial_z: 0
   pos_end_z: 0
+  s_1: 0
+  s_2: 0
+  s_3: 0
+  space_1: 0
+  space_2: 0
+  space_3: 0
 --- !u!114 &1769958843789090709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -513,7 +519,7 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 8763326334328421729}
-  - {fileID: 677491706431551152}
+  - {fileID: 5150236160280519935}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -533,7 +539,7 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
---- !u!114 &677491706431551152
+--- !u!114 &5150236160280519935
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -542,11 +548,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 2837258175148134844}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74ede7dd89b0d434c827c5a4249e9c7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 70c69bc08b3a624499926774c87df3a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 1
-  PlayerAlive: 1
-  playerUiPrefab: {fileID: 0}
-  tombstonePrefab: {fileID: 0}
-  beams: {fileID: 0}

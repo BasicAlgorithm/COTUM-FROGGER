@@ -39,14 +39,19 @@ namespace COTUM
         // Update is called once per frame
         void Update()
         {
-            s_1 = SemaphoreController.on_off_1;
-            s_2 = SemaphoreController.on_off_2;
-            s_3 = SemaphoreController.on_off_3;
+            //s_1 = SemaphoreController.on_off_1;
+            //s_2 = SemaphoreController.on_off_2;
+            //s_3 = SemaphoreController.on_off_3;
 
-            space_1 = StopSemaphore1();
-            space_2 = StopSemaphore2();
-            space_3 = StopSemaphore3();
+            //space_1 = StopSemaphore1();
+            //space_2 = StopSemaphore2();
+            //space_3 = StopSemaphore3();
             // semaphore_1
+            if (PlayerManager.GlobalFrezze)
+            {
+                return;
+            }
+
             if (SemaphoreController.on_off_1 && StopSemaphore1())
             {
                 return;

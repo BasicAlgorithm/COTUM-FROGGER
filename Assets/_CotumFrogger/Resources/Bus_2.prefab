@@ -257,7 +257,7 @@ GameObject:
   - component: {fileID: -1368123862364855527}
   - component: {fileID: -7949317072530583960}
   - component: {fileID: 8691518111348722344}
-  - component: {fileID: 8874311798112785845}
+  - component: {fileID: 3294695424951751684}
   m_Layer: 0
   m_Name: Bus_2
   m_TagString: SomeCar
@@ -331,6 +331,12 @@ MonoBehaviour:
   pos_initial_y: 0
   pos_initial_z: 0
   pos_end_z: 0
+  s_1: 0
+  s_2: 0
+  s_3: 0
+  space_1: 0
+  space_2: 0
+  space_3: 0
 --- !u!114 &-7949317072530583960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -351,7 +357,7 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 8691518111348722344}
-  - {fileID: 8874311798112785845}
+  - {fileID: 3294695424951751684}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -371,7 +377,7 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
---- !u!114 &8874311798112785845
+--- !u!114 &3294695424951751684
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -380,14 +386,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2933526829710006925}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74ede7dd89b0d434c827c5a4249e9c7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 70c69bc08b3a624499926774c87df3a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 1
-  PlayerAlive: 1
-  playerUiPrefab: {fileID: 0}
-  tombstonePrefab: {fileID: 0}
-  beams: {fileID: 0}
 --- !u!1 &2934001968718696523
 GameObject:
   m_ObjectHideFlags: 0

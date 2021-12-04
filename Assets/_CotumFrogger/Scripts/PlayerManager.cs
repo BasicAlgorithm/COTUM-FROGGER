@@ -37,6 +37,7 @@ namespace COTUM
 
         //True, when the user is firing
         bool IsFiring;
+        public static bool GlobalFrezze = false;
 
         #endregion
 
@@ -262,6 +263,20 @@ namespace COTUM
                     this.IsFiring = false;
                 }
             }
+            if (Input.GetButtonDown("Jump"))
+            {
+                if (!PlayerManager.GlobalFrezze)
+                {
+                    PlayerManager.GlobalFrezze = true;
+                }
+            }
+            if (Input.GetButtonUp("Jump"))
+            {
+                if (PlayerManager.GlobalFrezze)
+                {
+                    PlayerManager.GlobalFrezze = false;
+                }
+            }
         }
 
         #endregion
@@ -273,6 +288,7 @@ namespace COTUM
             if (stream.IsWriting)
             {
                 // We own this player: send the others our data
+                stream.SendNext(PlayerManager.GlobalFrezze);
                 stream.SendNext(this.IsFiring);
                 stream.SendNext(this.Health);
                 stream.SendNext(this.PlayerAlive);
@@ -280,11 +296,13 @@ namespace COTUM
             else
             {
                 // Network player, receive data
+                PlayerManager.GlobalFrezze = (bool)stream.ReceiveNext();
                 this.IsFiring = (bool)stream.ReceiveNext();
                 this.Health = (float)stream.ReceiveNext();
                 this.PlayerAlive = (bool)stream.ReceiveNext();
             }
         }
+        
 
         #endregion
     }
