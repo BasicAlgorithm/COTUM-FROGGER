@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_CotumFrogger/Scenes/MainMobile.unity
     guid: 3ff9b1b0d4a94d5468389106f403e9bf
-  - enabled: 0
+  - enabled: 1
     path: Assets/_CotumFrogger/Scenes/MainDesktop.unity
     guid: ea084053f4f1c0645aee9db5adc9ef23
   - enabled: 1
