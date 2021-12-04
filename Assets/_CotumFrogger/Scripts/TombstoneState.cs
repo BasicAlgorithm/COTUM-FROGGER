@@ -19,7 +19,7 @@ namespace COTUM
             if (other.tag.Contains("Player"))
             {
                 Debug.Log("Me estan reviviendo.");
-                gameObject.GetComponent<PlayerManager>().PlayerAlive = true;
+                PhotonView.Find(this.id).gameObject.GetComponent<PlayerManager>().PlayerAlive = true;
                 Debug.Log("He revivido.");
             }
         }

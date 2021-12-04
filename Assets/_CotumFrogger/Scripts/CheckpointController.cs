@@ -19,7 +19,7 @@ public class CheckpointController : MonoBehaviour
     // Update is called once per frame
     void Update() {
         int total = PhotonNetwork.CurrentRoom.PlayerCount;
-        if (this.players_colliding == total) {
+        if (this.players_colliding >= 2 * total) {
             Debug.Log("You WIN!");
             SceneManager.LoadScene("WinRoom");   
         }

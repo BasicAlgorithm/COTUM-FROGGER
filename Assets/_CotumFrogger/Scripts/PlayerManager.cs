@@ -157,6 +157,7 @@ namespace COTUM
                 this.PlayerAlive = false;
                 GameObject tombstone = PhotonNetwork.Instantiate(this.tombstonePrefab.name, this.transform.position, Quaternion.identity, 0);
                 tombstone.GetComponent<TombstoneState>().id = photonView.ViewID;
+                tombstone.transform.Rotate(-90, -90, 0);
                 Debug.Log("YOU LOSE");
                 Debug.Log(tombstone.GetComponent<TombstoneState>().id);
                 //SceneManager.LoadScene("LoseRoom");
