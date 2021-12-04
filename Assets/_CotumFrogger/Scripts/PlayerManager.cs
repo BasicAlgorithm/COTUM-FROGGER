@@ -156,18 +156,18 @@ namespace COTUM
             {
                 this.PlayerAlive = false;
                 GameObject tombstone = PhotonNetwork.Instantiate(this.tombstonePrefab.name, this.transform.position, Quaternion.identity, 0);
-                tombstone.GetComponent<TombstoneState>().id = photonView.ViewID;
+                tombstone.GetComponent<TombstoneState>().playerObject = this.gameObject;
                 tombstone.transform.Rotate(-90, -90, 0);
                 Debug.Log("YOU LOSE");
-                Debug.Log(tombstone.GetComponent<TombstoneState>().id);
+                //Debug.Log(tombstone.GetComponent<TombstoneState>().id);
                 //SceneManager.LoadScene("LoseRoom");
             }
 
             else if (other.tag.Contains("Tombstone"))
             {
                 Debug.Log("Reviviendo al jugador");
-                int playerToRevivePrefabId = other.GetComponent<TombstoneState>().id;
-                PhotonView.Find(playerToRevivePrefabId).RPC("Revive", RpcTarget.AllBuffered);
+                //int playerToRevivePrefabId = other.GetComponent<TombstoneState>().id;
+                //PhotonView.Find(playerToRevivePrefabId).RPC("Revive", RpcTarget.AllBuffered);
                 Debug.Log("Jugador revivido");
             }
         }

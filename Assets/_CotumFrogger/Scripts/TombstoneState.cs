@@ -7,7 +7,7 @@ namespace COTUM
 {
     public class TombstoneState : MonoBehaviourPunCallbacks
     {
-        public int id;
+        public GameObject playerObject;
 
         public void OnTriggerEnter(Collider other)
         {
@@ -19,7 +19,8 @@ namespace COTUM
             if (other.tag.Contains("Player"))
             {
                 Debug.Log("Me estan reviviendo.");
-                PhotonView.Find(this.id).gameObject.GetComponent<PlayerManager>().PlayerAlive = true;
+                playerObject.SetActive(true);
+                playerObject.GetComponent<PlayerManager>().PlayerAlive = true;
                 Debug.Log("He revivido.");
             }
         }
