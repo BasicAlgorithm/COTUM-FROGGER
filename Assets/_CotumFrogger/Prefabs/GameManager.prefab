@@ -43,10 +43,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cd3a56b7dc669d459107a6fba35d05c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPrefabDesktop: {fileID: 100030, guid: 395f74112944661498082fa14653060a, type: 3}
   playerPrefabDesktopBlue: {fileID: 1358487054155718271, guid: 0728c03b22a670940a149d6ed8eec50a, type: 3}
   playerPrefabDesktopRed: {fileID: 2943025740125779298, guid: ec9fbd05b6746154c8262bc1c43d6ce1, type: 3}
   playerPrefabDesktopGreen: {fileID: 2824321419560910751, guid: 770a45d3fc01352489e3b4bfc273d4b0, type: 3}
   playerPrefabMobile: {fileID: 5188390169643880983, guid: b1053a0b46f6e004bac7ec1e8bf810b4, type: 3}
+  prefabSemaphore: {fileID: 2176657586277418550, guid: 47ba66b074e4fa3448e581d3b18ef67e, type: 3}
   combiPrefab: {fileID: 7598568746016781666, guid: 7a99c2420b14b4aa18e6dee15529f809, type: 3}
   taxiPrefab: {fileID: 4532331704624675645, guid: e71c78f8f0b11467584016f0e8640e28, type: 3}
   policePrefab: {fileID: 2837258175148134844, guid: 47e7a794c452f4674bf9db876f27736d, type: 3}
