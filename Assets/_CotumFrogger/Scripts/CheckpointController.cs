@@ -32,6 +32,7 @@ namespace COTUM
                 {
                     PhotonNetwork.Destroy(GameManager.Instance.ViewsOfSemaphores[i]);
                 }
+                GameManager.Instance.ViewsOfSemaphores.Clear();
                 SceneManager.LoadScene("WinRoom");
             }
         }

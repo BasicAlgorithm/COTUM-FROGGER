@@ -210,6 +210,55 @@ namespace COTUM
             Application.Quit();
         }
 
+        public void PlayAgain()
+        {
+            GameObject sema_1_a33 = (GameObject)PhotonNetwork.Instantiate(this.prefabSemaphore.name, new Vector3(17.5f, -6.0f, 23.0f), Quaternion.identity, 0);
+            sema_1_a33.GetComponent<SemaphoreController>().id = 1;
+            sema_1_a33.GetComponent<SemaphoreController>().side = "a";
+            sema_1_a33.GetComponent<Transform>().position = new Vector3(0.0f, 0.0f, 0.0f);
+            ViewsOfSemaphores.Add(sema_1_a33.GetPhotonView());
+
+            GameObject sema_1_a = (GameObject)PhotonNetwork.Instantiate(this.prefabSemaphore.name, new Vector3(17.5f, -10.0f, 23.0f), Quaternion.identity, 0);
+            sema_1_a.GetComponent<SemaphoreController>().id = 1;
+            sema_1_a.GetComponent<SemaphoreController>().side = "a";
+            sema_1_a.GetComponent<Transform>().position = new Vector3(17.5f, -6.0f, 23.0f);
+            ViewsOfSemaphores.Add(sema_1_a.GetPhotonView());
+
+            GameObject sema_1_b = (GameObject)PhotonNetwork.Instantiate(this.prefabSemaphore.name, new Vector3(11.5f, -10.0f, 31.0f), Quaternion.identity, 0);
+            sema_1_b.GetComponent<SemaphoreController>().id = 1;
+            sema_1_b.GetComponent<SemaphoreController>().side = "b";
+            sema_1_b.GetComponent<Transform>().position = new Vector3(11.5f, -6.0f, 31.0f);
+            sema_1_b.GetComponent<Transform>().Rotate(0.0f, 180.0f, 0.0f);
+            ViewsOfSemaphores.Add(sema_1_b.GetPhotonView());
+
+            GameObject sema_2_a = (GameObject)PhotonNetwork.Instantiate(this.prefabSemaphore.name, new Vector3(-1.0f, -6.0f, 23.0f), Quaternion.identity, 0);
+            sema_2_a.GetComponent<SemaphoreController>().id = 2;
+            sema_2_a.GetComponent<SemaphoreController>().side = "a";
+            sema_2_a.GetComponent<Transform>().position = new Vector3(-1.0f, -6.0f, 40.0f);
+            ViewsOfSemaphores.Add(sema_2_a.GetPhotonView());
+
+            GameObject sema_2_b = (GameObject)PhotonNetwork.Instantiate(this.prefabSemaphore.name, new Vector3(-1.0f, -6.0f, 23.0f), Quaternion.identity, 0);
+            sema_2_b.GetComponent<SemaphoreController>().id = 2;
+            sema_2_b.GetComponent<SemaphoreController>().side = "b";
+            sema_2_b.GetComponent<Transform>().position = new Vector3(-7.0f, -6.0f, 44.0f);
+            sema_2_b.GetComponent<Transform>().Rotate(0.0f, 180.0f, 0.0f);
+            ViewsOfSemaphores.Add(sema_2_b.GetPhotonView());
+
+            GameObject sema_3_a = (GameObject)PhotonNetwork.Instantiate(this.prefabSemaphore.name, new Vector3(-18.5f, -6.0f, 23.0f), Quaternion.identity, 0);
+            sema_3_a.GetComponent<SemaphoreController>().id = 3;
+            sema_3_a.GetComponent<SemaphoreController>().side = "a";
+            sema_3_a.GetComponent<Transform>().position = new Vector3(-18.5f, -6.0f, 55.0f);
+            ViewsOfSemaphores.Add(sema_3_a.GetPhotonView());
+
+            GameObject sema_3_b = (GameObject)PhotonNetwork.Instantiate(this.prefabSemaphore.name, new Vector3(-18.5f, -6.0f, 23.0f), Quaternion.identity, 0);
+            sema_3_b.GetComponent<SemaphoreController>().id = 3;
+            sema_3_b.GetComponent<SemaphoreController>().side = "b";
+            sema_3_b.GetComponent<Transform>().position = new Vector3(-25.5f, -6.0f, 58.0f);
+            sema_3_b.GetComponent<Transform>().Rotate(0.0f, 180.0f, 0.0f);
+            ViewsOfSemaphores.Add(sema_3_b.GetPhotonView());
+            SceneManager.LoadScene("FirstLevel");
+        }
+
         #endregion
 
         #region Private Methods
